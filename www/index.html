@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="framework7/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" type="text/css" href="framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" type="text/css" href="icon-fonts/font-awesome-4.3.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/startPage_main.less.css" class="main-less">
+    <link rel="stylesheet" type="text/css" href="framework7/css/framework7.material.min.css" class="uib-framework-theme">
+    <link rel="stylesheet" type="text/css" href="framework7/css/framework7.material.colors.min.css" class="uib-framework-theme">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+    <script src="intelxdk.js"></script>
+    <script src="cordova.js"></script>
+    <script src="xhr.js"></script>
+    <script src="xdk/init-dev.js"></script>
+    <script>
+        function onDeviceReady() {
+            intel.xdk.device.hideSplashScreen();
+        }
+        document.addEventListener("intel.xdk.device.ready", onDeviceReady, false);
+    </script>
+    <script type="application/javascript" src="lib/jquery.min.js"></script>
+    <script type="application/javascript" src="framework7/js/framework7.min.js"></script>
+    <script type="application/javascript" src="xdk/ad/fw7_subpage.js"></script>
+    <link rel="stylesheet" href="lib/Swiper/css/swiper.min.css">
+    <script src="lib/Swiper/js/swiper.min.js"></script>
+
+    <script src="lib/require.js"></script>
+    <script src="lib/oauth/lib/url.min.js"></script>
+    <script src="lib/oauth/lib/cryptojs/hmac-sha1.js"></script>
+    <script src="lib/oauth/lib/cryptojs/enc-base64-min.js"></script>
+    <script src="lib/oauth/app/oauth-1.0a.js"></script>
+    <script src="lib/oauth/app/oauth-signature.js"></script>
+    
+    
+    <script type="application/javascript" src="js/bootLoader.js"></script>
+    
+    
+    
+
+    <link rel="stylesheet" href="css/starter.css">
+</head>
+
+<body>
+    <div class="uwrap views">
+        <div class="upage vertical-col left view-main view" id="mainpage">
+            <div class="pages">
+
+                <div class="page">
+                    <div onclick="escapeTut()" class="escapeTutbtn">
+                        Skip
+                    </div>
+                    <div class="page-content upage-content content-area" id="page_5_36">
+                        <div class="swiper-container" style="display:none">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div>
+                                        <h3 tkey="SelectingLanguage">Selecting Language</h3>
+                                        <hr/>
+                                        <select id="app_lang" onchange="changeLange()">
+                                            <option value="en" tkey="Engilish">Engilish</option>
+                                            <option value="fa" tkey="Persian">Persian</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">Get Push notification for new orders</div>
+                                <div class="swiper-slide">View orders on mobile app</div>
+                                <div class="swiper-slide">Update order status on the go</div>
+                            </div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="upage vertical-col left hidden view" id="setting_page">
+            <div class="pages">
+
+                <div class="page navbar-fixed">
+                    <div class="navbar inner-element uib_w_1" data-uib="framework7/header" data-ver="0">
+                        <div class="navbar-inner">
+                            <div class="left">
+                                <div class="widget-container content-area horiz-area wrapping-col"></div>
+                            </div>
+                            <div class="center labeltext">Store Connection</div>
+                            <div class="right">
+                                <div class="widget-container content-area horiz-area wrapping-col">
+                                    <div class="widget-container content-area horiz-area wrapping-col">
+                                        <a class="widget d-margins link" data-uib="framework7/button" data-ver="0" onclick="OpenQRcodeReader()">
+                                            <span></span><i class="fa fa-qrcode" data-position="icon only"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-content upage-content content-area" id="page_6_1">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-content-inner">
+                                    <div class="mat-div">
+                                        <label for="Store-URL" class="mat-label">Store URL(with http:// or https://)</label>
+                                        <input id="Store-URL" type="url" class="mat-input">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-content-inner">
+                                    <div class="mat-div">
+                                        <label for="Username" class="mat-label">Consumer key</label>
+                                        <input id="Username" type="text" class="mat-input">
+                                    </div>
+                                    <div class="mat-div">
+                                        <label for="Password" class="mat-label">Consumer secret</label>
+                                        <input id="Password" type="text" class="mat-input">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" tkey="Notification">Notification</div>
+                            <div class="card-content">
+                                <div class="card-content-inner">
+                                    <div class="row no-gutter">
+                                        <div class="col-50"><b>On New Order</b></div>
+                                        <div class="col-50" align="center">
+                                            <label class="label-switch">
+                                                <input type="checkbox" checked>
+                                                <div class="checkbox"></div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row no-gutter">
+                                        <div class="col-50"><b>On New User</b></div>
+                                        <div class="col-50" align="center">
+                                            <label class="label-switch">
+                                                <input type="checkbox" checked>
+                                                <div class="checkbox"></div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-content-inner">
+                                    <a href="#" class="button active" onclick="ConnectToWebSite()">Start Connect</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script type="application/javascript" src="framework7/my-app.js"></script>
+    <script type="application/javascript" src="lib/lang.js"></script>
+</body>
+
+</html>

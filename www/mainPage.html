@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="framework7/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" type="text/css" href="icon-fonts/font-awesome-4.3.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="framework7/css/framework7.material.min.css" class="uib-framework-theme">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="framework7/css/framework7.material.colors.min.css" class="uib-framework-theme">
+    <title>Woo Admin</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+    <!-- <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+
+    <style>
+        @-ms-viewport {
+            width: 100vw;
+            min-zoom: 100%;
+            zoom: 100%;
+        }
+        
+        @viewport {
+            width: 100vw;
+            min-zoom: 100% zoom: 100%;
+        }
+        
+        @-ms-viewport {
+            user-zoom: fixed;
+            min-zoom: 100%;
+        }
+        
+        @viewport {
+            user-zoom: fixed;
+            min-zoom: 100%;
+        }
+        /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+    </style>
+
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+    <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+
+    <script src="cordova.js" id="xdkJScordova_"></script>
+
+    <script src="js/app.js"></script>
+    <!-- for your event code, see README and file comments for details -->
+    <script src="js/init-app.js"></script>
+    <!-- for your init code, see README and file comments for details -->
+    <script src="xdk/init-dev.js"></script>
+    <!-- normalizes device and document ready events, see file for details -->
+    <script type="application/javascript" src="lib/jquery.min.js"></script>
+
+    <script type="application/javascript" src="framework7/js/framework7.min.js"></script>
+
+    <script type="application/javascript" src="js/core.js"></script>
+    <script type="application/javascript" src="js/core/review.js"></script>
+    <script type="application/javascript" src="js/core/ManageProduct.js"></script>
+    <script type="application/javascript" src="js/core/newProduct.js"></script>
+    <script type="application/javascript" src="js/core/editProduct.js"></script>
+    <script type="application/javascript" src="js/core/notification.js"></script>
+    <script type="application/javascript" src="js/core/SaleReport.js"></script>
+    <script type="application/javascript" src="js/core/OderManage.js"></script>
+    <script type="application/javascript" src="js/core/catgoryManage.js"></script>
+    <script type="application/javascript" src="js/core/CustomerManage.js"></script>
+    <script type="application/javascript" src="js/core/appSetting.js"></script>
+    <script type="application/javascript" src="js/core/dashboard.js"></script>
+    <script type="application/javascript" src="js/index_user_scripts.js"></script>
+    <script type="application/javascript" src="sidebar/js/hammer.js"></script>
+    <script type="application/javascript" src="sidebar/js/jquery.hammer.js"></script>
+    <script type="application/javascript" src="sidebar/js/swipe-hammer.js"></script>
+    <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
+    <script type="application/javascript" src="xdk/ad/fw7_subpage.js"></script>
+    <script type="application/javascript" src="js/jquery.canvasjs.min.js"></script>
+    <script type="application/javascript" src="lib/jquery.timeago.js"></script>
+
+    <link rel="stylesheet" href="lib/Swiper/css/swiper.min.css">
+    <script src="lib/Swiper/js/swiper.min.js"></script>
+
+    <script src="lib/require.js"></script>
+    <script src="lib/oauth/lib/url.min.js"></script>
+    <script src="lib/oauth/lib/cryptojs/hmac-sha1.js"></script>
+    <script src="lib/oauth/lib/cryptojs/enc-base64-min.js"></script>
+    <script src="lib/oauth/app/oauth-1.0a.js"></script>
+    <script src="lib/oauth/app/oauth-signature.js"></script>
+    <script src="lib/jquery.priceformat.min.js"></script>
+    <link rel="stylesheet" href="css/starter.css">
+
+</head>
+
+<body>
+
+
+    <div class="uwrap views">
+        <div class="panel-overlay"></div>
+        <div class="upage view-main view" id="mainpage">
+            <div class="pages">
+
+                <div class="page navbar-fixed">
+                    <div class="navbar inner-element uib_w_1" data-uib="framework7/header" data-ver="0">
+                        <div class="navbar-inner">
+                            <div class="left">
+                                <div class="widget-container content-area horiz-area wrapping-col"><a class="widget uib_w_2 d-margins link" data-uib="framework7/button" data-ver="0"><span></span><i class="icon-bars icon" data-position="icon only"></i></a>
+                                </div>
+                            </div>
+                            <div class="center labeltext" id="shopName">WooAdmin</div>
+                            <div class="right">
+                                <div class="widget-container content-area horiz-area wrapping-col"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="upage-content ac0 content-area vertical-col left page-content" id="page_35_38" style="padding-top: 20px;">
+
+                        <div class="widget uib_w_17 d-margins dashboardContent" data-uib="framework7/content_block" data-ver="0">
+
+                        </div>
+                    </div>
+
+                    <div id="MenuSideBar" class="inner-element uib_sidebar leftbar bar-bg thumb-bg bar-gutter swipe" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':200, 'side':'left', 'dur':200}" style="display:none">
+                        <div class="sidebar-thumb"></div>
+                        <div class="sidebar-content content-area vertical-col" style="margin-top:60px">
+                            <div class="content-block" style="padding:0px;margin: 0px;" dir="auto">
+
+                                <button class="accordion" tkey="Products"></button>
+                                <div class="accordionpanel">
+                                    <a class="button widget panel-close GOCreateProductPage"><span tkey="addnewProduct"></span></a>
+                                    <a class="button widget panel-close goProductListPage"><span tkey="ProductList"></span></a>
+                                    <a class="button widget panel-close GoCategoryPage" style="display:none"><span tkey="Categories"></span></a>
+                                </div>
+
+                                <button class="accordion" tkey="Orders"></button>
+                                <div class="accordionpanel">
+                                    <a class="widget uib_w_9 button panel-close"><span tkey="OrderList"></span></a>
+                                </div>
+
+                                <button class="accordion" tkey="Reports"></button>
+                                <div class="accordionpanel">
+                                    <a class="widget uib_w_15 button panel-close"><span tkey="Sales"></span></a>
+                                    <a class="widget uib_w_16 button panel-close"><span tkey="TopSellers"></span></a>
+                                </div>
+
+                                <button class="accordion" tkey="Customers"></button>
+                                <div class="accordionpanel">
+                                    <a class="widget uib_w_45 button GoCustomerPage panel-close"><span tkey="MyCustomer"></span></a>
+                                </div>
+
+                                <a id="goAppSettingPage" class="widget d-margins link button panel-close AppSetting" data-uib="framework7/button" data-ver="0"><span></span><i class="fa fa-gear"></i>   <b tkey="AppSetting"></b></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="upage vertical-col left hidden view" id="newProductPage">
+            <div class="pages">
+
+                <div class="page navbar-fixed">
+                    <div class="navbar inner-element uib_w_4" data-uib="framework7/header" data-ver="0">
+                        <div class="navbar-inner">
+                            <div class="left">
+                                <div class="widget-container content-area horiz-area wrapping-col"><a class="widget uib_w_11 d-margins link" data-uib="framework7/button" data-ver="0"><span></span><i class="icon-back icon" data-position="icon only"></i></a>
+                                </div>
+                            </div>
+                            <div class="center labeltext" tkey="NewProduct"></div>
+                            <div class="right">
+                                <div class="widget-container content-area horiz-area wrapping-col">
+                                    <a class="widget d-margins link open-popover" data-popover=".popover-links-New-product" data-uib="framework7/button" data-ver="0"><span></span><i class="fa fa-ellipsis-v" data-position="icon only"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-content upage-content content-area newProductContent" id="page_36_83">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="upage vertical-col left hidden view" id="editProductPage">
+            <div class="pages">
+
+                <div class="page navbar-fixed">
+                    <div class="navbar inner-element uib_w_4" data-uib="framework7/header" data-ver="0">
+                        <div class="navbar-inner">
+                            <div class="left">
+                                <div class="widget-container content-area horiz-area wrapping-col"><a class="widget uib_w_11 d-margins link" data-uib="framework7/button" data-ver="0"><span></span><i class="icon-back icon" data-position="icon only"></i></a>
+                                </div>
+                            </div>
+                            <div class="center labeltext" tkey="EditProduct"></div>
+                            <div class="right">
+                                <div class="widget-container content-area horiz-area wrapping-col">
+                                    <a class="widget d-margins link open-popover" data-popover=".popover-links-Edit-product" data-uib="framework7/button" data-ver="0"><span></span><i class="fa fa-ellipsis-v" data-position="icon only"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-content upage-content content-area editProductContent" id="page_36_83">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="upage vertical-col left hidden view" id="productListPage">
+            <div class="pages">
+
+                <div class="page navbar-fixed">
+                    <div class="navbar inner-element " data-uib="framework7/header" data-ver="0">
+                        <div class="navbar-inner" id="productListHeader">
+                            <div class="left">
+                                <div class="widget-container content-area horiz-area wrapping-col"><a class="widget BackFromProductListPage d-margins link" data-uib="framework7/button" data-ver="0"><span></span><i class="icon-back icon" data-position="icon only"></i></a>
+                                </div>
+                            </div>
+                            <div class="center labeltext" tkey="ProductList"></div>
+                            <div class="right">
+                                <div class="widget-container content-area horiz-area wrapping-col">
+                                    <a class="widget ProductCategory d-margins link" data-uib="framework7/button" data-ver="0" onclick="showSearchProduct()">
+                                        <span></span><i class="fa fa-search icon" data-position="icon only"></i>
+                                    </a>
+                                    <a class="widget ProductCategory d-margins link open-popup" data-uib="framework7/button" data-popup=".popup-Category" data-ver="0" onclick="loadCategory()">
+                                        <span></span><i class="fa fa-sliders icon" data-position="icon only"></i>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div id="productsearchHeader" class="navbar-inner" style="display:none">
+                            <div class="row no-gutter" style="width:100%;">
+                                <div class="col-90">
+                                    <input id="productsearchInput" type="search" placeholder="Search..." onkeydown="searhItProduct()">
+                                </div>
+                                <div class="col-10" align="center"><i class="fa fa-chevron-right" aria-hidden="true" onclick="hideSearchProduct()"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="popup popup-Category">
+                        <div>
+                            <div class="toolbar tabbar tabbar-scrollable">
+                                <div class="toolbar-inner">
+                                    <a href="#" class="link active close-popup"><i class="fa fa-times" aria-hidden="true"></i></a>
+                                    <a href="#" class="link" onclick="restCatgory()"><i class="fa fa-home" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                            <br>
+                            <div id="CategoryListPopUp">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-content upage-content content-area productList" id="page_90_85" onscroll="loadOhterProduct()">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="upage vertical-col left hidden view" id="NewOrderPage">
+            <div class="pages">
+
+                <div class="page navbar-fixed">
+                    <div class="navbar inner-element uib_w_21" data-uib="framework7/header" data-ver="0">
+                        <div class="navbar-inner">
+                            <div class="left">
+                                <div class="widget-container content-area horiz-area wrapping-col"><a class="widget uib_w_23 d-margins link" data-uib="framework7/button" data-ver="0"><span></span><i class="icon-back icon" data-position="icon only"></i></a>
+                                </div>
+                            </div>
+                            <div class="center labeltext" tkey="newOrder"></div>
+                            <div class="right">
+                                <div class="widget-container content-area horiz-area wrapping-col"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-content upage-content content-area" id="page_90_93"></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="upage vertical-col left hidden view" id="OrderListPage">
+            <div class="pages">
+
+                <div class="page navbar-fixed">
+                    <div class="navbar inner-element uib_w_22" data-uib="framework7/header" data-ver="0">
+                        <div class="navbar-inner">
+                            <div class="left">
+                                <div class="widget-container content-area horiz-area wrapping-col"><a class="widget uib_w_24 d-margins link" data-uib="framework7/button" data-ver="0"><span></span><i class="icon-back icon" data-position="icon only"></i></a>
+                                </div>
+                            </div>
+                            <div class="center labeltext" tkey="OrderList"></div>
+                            <div class="right">
+                                <div class="widget-container content-area horiz-area wrapping-col"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-header">
+                        <div class="row no-gutter">
+                            <div class="col-50">
+                                <select id="oderStatus" onchange="fetchOrderList()" class="selectMain" dir="auto">
+                                    <option value="any" selected="" tkey="any">any</option>
+                                    <option value="pending" tkey="pending">pending</option>
+                                    <option value="processing" tkey="processing">processing</option>
+                                    <option value="on-hold" tkey="onhold">on-hold</option>
+                                    <option value="completed" tkey="completed">completed</option>
+                                    <option value="cancelled" tkey="cancelled">cancelled</option>
+                                    <option value="refunded" tkey="refunded">refunded</option>
+                                    <option value="failed" tkey="failed">failed</option>
+                                </select>
+                            </div>
+                            <div class="col-50">
+                                <select id="Order_order" onchange="fetchOrderList()" class="selectMain" dir="auto">
+                                    <option value="desc" tkey="desc"></option>
+                                    <option value="asc" tkey="asc"></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-content upage-content content-area infinite-scroll infinite-scroll-top pull-to-refresh-content pull-to-refresh-content_orderList" data-ptr-distance="55" data-distance="100" id="OrderListPageContent" style="padding-top: 0px;padding-bottom: 85px;">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="upage vertical-col left hidden view" id="SalePage">
+            <div class="pages">
+
+                <div class="page navbar-fixed">
+                    <div class="navbar inner-element uib_w_29" data-uib="framework7/header" data-ver="0">
+                        <div class="navbar-inner">
+                            <div class="left">
+                                <div class="widget-container content-area horiz-area wrapping-col"><a class="widget uib_w_30 d-margins link" data-uib="framework7/button" data-ver="0"><span></span><i class="icon-back icon" data-position="icon only"></i></a>
+                                </div>
+                            </div>
+                            <div class="center labeltext">Sale Reprot</div>
+                            <div class="right">
+                                <div class="widget-container content-area horiz-area wrapping-col"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-content upage-content content-area SaleReportContent" id="page_94_68" style="margin-top: 0px;padding-top: 0px;">
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="upage vertical-col left hidden view" id="TopSalePage">
+            <div class="pages">
+
+                <div class="page navbar-fixed">
+                    <div class="navbar inner-element uib_w_31" data-uib="framework7/header" data-ver="0">
+                        <div class="navbar-inner">
+                            <div class="left">
+                                <div class="widget-container content-area horiz-area wrapping-col"><a class="widget uib_w_32 d-margins link" data-uib="framework7/button" data-ver="0"><span></span><i class="icon-back icon" data-position="icon only"></i></a>
+                                </div>
+                            </div>
+                            <div class="center labeltext">Top Sale</div>
+                            <div class="right">
+                                <div class="widget-container content-area horiz-area wrapping-col"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-content upage-content content-area TopSalePageContent" id="page_95_15" style="margin-top: 0px;padding-top: 0px;"></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="upage vertical-col left hidden view" id="SingleOrder">
+            <div class="pages">
+
+                <div class="page navbar-fixed">
+                    <div class="navbar inner-element uib_w_39" data-uib="framework7/header" data-ver="0">
+                        <div class="navbar-inner">
+                            <div class="left">
+                                <div class="widget-container content-area horiz-area wrapping-col"><a class="widget uib_w_40 d-margins link" data-uib="framework7/button" data-ver="0" id="backfromsingleorder"><span></span><i class="icon-back icon" data-position="icon only"></i></a>
+                                </div>
+                            </div>
+                            <div class="center labeltext" id="SingleOrderNumber">#:--</div>
+                            <div class="right">
+                                <div class="widget-container content-area horiz-area wrapping-col">
+                                    <a class="widget d-margins link" data-uib="framework7/button" data-ver="0" onclick="removeLastedOrder()">
+                                        <span></span><i class="fa fa-trash icon" data-position="icon only"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="toolbar tabbar inner-element uib_w_41 d-margins" data-uib="framework7/tab_bar" data-ver="0" style="margin-top:-10px;">
+                        <div class="toolbar-inner">
+                            <a href="#tab1" class="tab-link widget uib_w_42 active productListorder" data-uib="framework7/tab" data-ver="0">
+                                <span class="tabbar-label" tkey="products">products</span>
+                            </a>
+                            <a href="#tab2" class="tab-link widget uib_w_43 orderDtial" data-uib="framework7/tab" data-ver="0">
+                                <span class="tabbar-label" tkey="public">public</span>
+                            </a>
+                            <a href="#" class="tab-link widget uib_w_44 orderNote" data-uib="framework7/tab" data-ver="0">
+                                <span class="tabbar-label" tkey="history">history</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="page-content upage-content content-area" id="page_66_5" style="margin-top:60px;padding-top: 40px;padding-left: 0px;padding-bottom: 60px;">
+                        <div id="productListOrder" class="hidden" style="padding-bottom: 80px;">
+                            --
+                        </div>
+                        <div id="orderDtialPage" class="hidden" style="padding-bottom: 80px;">
+                            --
+                        </div>
+                        <div id="orderNotePage" class="hidden" style="padding-bottom: 80px;">
+                            --
+                        </div>
+
+                        <div id="orderFoooterInfo" class="footer-fix">
+                            <select id="ThisOrder" onchange="changeOrderStatus()" class="selectStyle" dir="auto">
+                                <option value="pending" tkey="pending">pending</option>
+                                <option value="processing" tkey="processing">processing</option>
+                                <option value="on-hold" tkey="onhold">on hold</option>
+                                <option value="completed" tkey="completed">completed</option>
+                                <option value="cancelled" tkey="cancelled">cancelled</option>
+                                <option value="refunded" tkey="refunded">refunded</option>
+                                <option value="failed" tkey="failed">failed</option>
+                            </select>
+                            <br>
+                            <div class="row no-gutter">
+                                <div class="col-50"><b id="orderTime">--</b>
+                                </div>
+                                <div class="col-50"><b id="orderTotalPrice" dir="auto">--</b>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="orderChat" class="footer-fix" style="display:none;">
+                            <div class="row no-gutter">
+                                <div class="col-80">
+                                    <input id="orderNoteText" type="text" class="chat-input">
+                                </div>
+                                <div class="col-20" align="center" onclick="sendNewNoteOrder()"><i class="fa fa-caret-right" aria-hidden="true" style="font-size:40px;"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="upage vertical-col left hidden view" id="CategoryPage">
+            <div class="pages">
+
+                <div class="page navbar-fixed">
+                    <div class="navbar inner-element uib_w_45" data-uib="framework7/header" data-ver="0">
+                        <div class="navbar-inner">
+                            <div class="left">
+                                <div class="widget-container content-area horiz-area wrapping-col"><a class="widget uib_w_46 d-margins link" data-uib="framework7/button" data-ver="0" id="backfromcatgory"><span></span><i class="icon-back icon" data-position="icon only"></i></a>
+                                </div>
+                            </div>
+                            <div class="center labeltext" tkey="Categories"></div>
+                            <div class="right">
+                                <div class="widget-container content-area horiz-area wrapping-col"><a class="widget uib_w_47 d-margins link" data-uib="framework7/button" data-ver="0" id="newCategorybtn"><span></span><i class="icon-plus icon" data-position="icon only"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-content upage-content content-area" id="page_48_50">
+                        <ul id="MainCatgoryList" dir="rtl">
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="upage vertical-col left hidden view" id="CustomerPage">
+            <div class="pages">
+
+                <div class="page navbar-fixed">
+                    <div class="navbar inner-element uib_w_48" data-uib="framework7/header" data-ver="0">
+                        <div id="myCustomerHeeadr" class="navbar-inner">
+                            <div class="left">
+                                <div class="widget-container content-area horiz-area wrapping-col"><a class="widget uib_w_49 d-margins link" data-uib="framework7/button" data-ver="0"><span></span><i class="icon-back icon" data-position="icon only"></i></a>
+                                </div>
+                            </div>
+                            <div class="center labeltext" tkey="MyCustomer"></div>
+                            <div class="right">
+                                <div class="widget-container content-area horiz-area wrapping-col">
+                                    <a class="widget d-margins link" data-uib="framework7/button" data-ver="0" onclick="ShowSearchCustomer()">
+                                        <span></span><i class="fa fa-search icon" data-position="icon only"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="CustomerSearchHeader" class="navbar-inner" style="display:none">
+                            <div class="row no-gutter" style="width:100%;">
+                                <div class="col-90">
+                                    <input id="CustomersearchInput" type="search" placeholder="Search..." onkeydown="searhItCustomer()">
+                                </div>
+                                <div class="col-10" align="center"><i class="fa fa-chevron-right" aria-hidden="true" onclick="hideSearchCustomer()"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-content upage-content content-area" id="page_21_53">
+                        <div id="CustomerList" class="list-block">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="upage vertical-col left hidden view" id="SingleCustomer">
+            <div class="pages">
+
+                <div class="page navbar-fixed">
+                    <div class="navbar inner-element uib_w_50" data-uib="framework7/header" data-ver="0">
+                        <div class="navbar-inner">
+                            <div class="left">
+                                <div class="widget-container content-area horiz-area wrapping-col"><a class="widget uib_w_51 d-margins link" data-uib="framework7/button" data-ver="0"><span></span><i class="icon-back icon" data-position="icon only"></i></a>
+                                </div>
+                            </div>
+                            <div class="center labeltext" id="SingleCustomerHeader"></div>
+                            <div class="right">
+                                <div class="widget-container content-area horiz-area wrapping-col"></div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="page-content upage-content content-area customerData" id="page_36_89">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="upage vertical-col left hidden view" id="singleProductPage">
+            <div class="pages">
+
+                <div class="page navbar-fixed">
+                    <div class="navbar inner-element " data-uib="framework7/header" data-ver="0">
+                        <div class="navbar-inner">
+                            <div class="left">
+                                <div class="widget-container content-area horiz-area wrapping-col">
+                                    <a class="widget backFromSingleProudct  d-margins link" data-uib="framework7/button" data-ver="0"><span></span><i class="icon-back icon" data-position="icon only"></i></a>
+                                </div>
+                            </div>
+                            <div class="center labeltext" id="SingleProductHeader"></div>
+                            <div class="right">
+                                <div class="widget-container content-area horiz-area wrapping-col">
+                                    <a class="widget d-margins link open-popover" data-popover=".popover-links-product" data-uib="framework7/button" data-ver="0"><span></span><i class="fa fa-ellipsis-v" data-position="icon only"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="page-content upage-content content-area" id="singleProductPageContent" style="padding-top:60px;">
+
+                    </div>
+
+                    <!-- Links popover -->
+                    <div class="popover popover-links-product">
+                        <div class="popover-angle"></div>
+                        <div class="popover-inner">
+                            <div class="list-block">
+                                <ul>
+                                    <li><a href="#" class="list-button item-link" tkey="Edit" onclick="loadEditProduct(LastProductIds)">Edit</a>
+                                    </li>
+                                    <li><a href="#" class="list-button item-link" onclick="deleteLastedProduct()" tkey="Trash">Trash</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="upage vertical-col left hidden view" id="setting_page">
+            <div class="pages">
+                <div class="page navbar-fixed">
+                    <div class="navbar inner-element uib_w_52" data-uib="framework7/header" data-ver="0">
+                        <div class="navbar-inner">
+                            <div class="left">
+                                <div class="widget-container content-area horiz-area wrapping-col"><a class="widget uib_w_53 d-margins link" data-uib="framework7/button" data-ver="0"><span></span><i class="icon-back icon" data-position="icon only"></i></a>
+                                </div>
+                            </div>
+                            <div class="center labeltext" tkey="AppSetting"></div>
+                            <div class="right">
+                                <div class="widget-container content-area horiz-area wrapping-col">
+                                    <a class="widget d-margins link" data-uib="framework7/button" data-ver="0" onclick="OpenQRcodeReader()">
+                                        <span></span><i class="fa fa-qrcode" data-position="icon only"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-content upage-content content-area settingContent" id="page_83_24"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="application/javascript" src="framework7/my-app.js">
+    </script>
+    <script type="application/javascript" src="lib/lang.js"></script>
+</body>
+
+</html>

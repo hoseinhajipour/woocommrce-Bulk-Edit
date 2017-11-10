@@ -1,0 +1,254 @@
+<div id="productLoadig" align="center" style="width: 100vw;padding-top:100px;">
+    <img src="img/puff.svg" width="64" />
+</div>
+
+
+<div class="swiper-container" id="productImages" style="display:none">
+    <div class="swiper-wrapper" id="productImageGallery">
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-scrollbar"></div>
+</div>
+
+
+
+<div class="navbar" id="productnavbar" style="display:none">
+    <div class="navbar-inner">
+        <div class="center" style="margin-left: 0px;margin-right: 0px;">
+            <div class="buttons-row">
+
+                <a href="#tab1" class="tab-link active button tab-product" tkey="General" style="min-width: 85px;">General</a>
+                <a href="#tab2" class="tab-link button tab-product" tkey="Description" style="min-width: 95px;">Description</a>
+                <a href="#reviewTab" class="tab-link button tab-product" onclick="fetchProductReview()" tkey="Reviews">Reviews</a>
+                <a href="#ProductOrder" class="tab-link button tab-product" onclick="fetchProductOrder()" tkey="Orders">Orders</a>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="pages" id="productnavbarpages" style="display:none">
+    <div class="page">
+        <div class="page-content" style="padding: 0px;">
+
+            <div class="tabs-animated-wrap">
+
+                <div class="tabs">
+                    <div id="tab1" class="tab active">
+                        <div class="card" dir="auto">
+                            <div class="card-header"><i class="fa fa-info-circle"> <b tkey="Category">Category</b></i>
+
+                            </div>
+
+                            <div class="card-content">
+                                <div class="card-content-inner" id="product_Category" align="left">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card" dir="auto">
+                            <div class="card-header"><i class="fa fa-info-circle"> <b tkey="General">General</b></i>
+
+                            </div>
+
+                            <div class="card-content">
+                                <div class="card-content-inner">
+                                    <div class="list-block">
+                                        <ul>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title label">SKU:</div>
+                                                        <div class="item-title">
+                                                            <b id="Product_sku"></b>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title label" tkey="Price"></div>
+                                                        <div class="item-title">
+                                                            <b id="Product_price"></b>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title label" tkey="Quantity"></div>
+                                                        <div class="item-title ">
+                                                            <b id="Product_quantity"></b>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title label" tkey="Type"></div>
+                                                        <div class="item-title ">
+                                                            <b id="Product_type"></b>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title label" tkey="Status"></div>
+                                                        <div class="item-title">
+                                                            <b id="Product_status"></b>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title label" tkey="TotalOrdered"></div>
+                                                        <div class="item-title">
+                                                            <b id="Product_total_ordered"></b>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="card" dir="auto">
+                            <div class="card-header"><i class="fa fa-info-circle"> <b tkey="attributes"></b></i>
+
+                            </div>
+
+                            <div class="card-content">
+                                <div class="card-content-inner">
+                                    <div class="list-block">
+                                        <ul id="product_attributes">
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="card" dir="auto">
+                            <div class="card-header"><i class="fa fa-info-circle"> <b tkey="Dimensions"></b></i>
+
+                            </div>
+
+                            <div class="card-content">
+                                <div class="card-content-inner">
+                                    <div class="list-block">
+                                        <ul>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title label" tkey="weight"></div>
+                                                        <div class="item-title">
+                                                            <b id="Product_weight"></b>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title label" tkey="length"></div>
+                                                        <div class="item-title">
+                                                            <b id="Product_length"></b>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title label" tkey="width"></div>
+                                                        <div class="item-title">
+                                                            <b id="Product_width"></b>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title label" tkey="height"></div>
+                                                        <div class="item-title">
+                                                            <b id="Product_height"></b>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Tab 2 -->
+                    <div id="tab2" class="tab">
+                        <div class="card">
+                            <div class="card-header"><i class="fa fa-info-circle"> <b tkey="description"></b></i>
+
+                            </div>
+
+                            <div class="card-content">
+                                <div class="card-content-inner" id="product_description">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header"><i class="fa fa-info-circle"> <b tkey="shortdescription"></b></i>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-content-inner" id="product_short_description">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header"><i class="fa fa-info-circle"> <b tkey="Tags"></b></i>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-content-inner">
+                                    <div class="content-block" id="product_tags">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="reviewTab" class="tab">
+                        <div id="reviewTabContent"></div>
+                    </div>
+
+                    <div id="ProductOrder" class="tab">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,73 @@
+<div dir="auto">
+    <div class="card">
+        <div class="card-content">
+            <div class="card-content-inner">
+                <div class="mat-div">
+                    <label for="Store-URL" class="mat-label">Store URL(with http:// or https://)</label>
+                    <input id="Store-URL" type="url" class="mat-input">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-content">
+            <div class="card-content-inner">
+                <div class="mat-div">
+                    <label for="Username" class="mat-label">Consumer key</label>
+                    <input id="Username" type="text" class="mat-input">
+                </div>
+                <div class="mat-div">
+                    <label for="Password" class="mat-label">Consumer secret</label>
+                    <input id="Password" type="text" class="mat-input">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card" dir="auto">
+        <div class="card-header" tkey="Notification"></div>
+        <div class="card-content">
+            <div class="card-content-inner">
+                <div class="row no-gutter">
+                    <div class="col-50"><b>On New Order</b></div>
+                    <div class="col-50" align="center">
+                        <label class="label-switch">
+                            <input type="checkbox" checked>
+                            <div class="checkbox"></div>
+                        </label>
+                    </div>
+                </div>
+                <div class="row no-gutter">
+                    <div class="col-50"><b>On New User</b></div>
+                    <div class="col-50" align="center">
+                        <label class="label-switch">
+                            <input type="checkbox" checked>
+                            <div class="checkbox"></div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card" dir="auto">
+        <div class="card-header" tkey="language"></div>
+        <div class="card-content">
+            <div class="card-content-inner">
+                <div class="input-option">
+                    <select id="app_lang">
+                        <option value="en" tkey="Engilish">Engilish</option>
+                        <option value="fa" tkey="Persian">Persian</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-content">
+            <div class="card-content-inner">
+                <a href="#" class="button link saveSetting" onclick="saveSetting()">Save Connection</a>
+                <a href="#" class="button link removeSetting" onclick="removeSetting()">Remove Connection</a>
+
+            </div>
+        </div>
+    </div>
+</div>

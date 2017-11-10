@@ -1,0 +1,559 @@
+/*
+ * Please see the included README.md file for license terms and conditions.
+ */
+
+
+/* This file is completely optional and not required. */
+
+
+/* Note the reference that includes it in the index.html file. */
+
+
+/* Disable certain interactions on touch devices */
+
+
+/* SOURCE: https://github.com/ftlabs/fastclick/blob/master/examples/input.html */
+
+
+/* LICENSE: https://github.com/ftlabs/fastclick/blob/master/LICENSE */
+
+@font-face {
+    font-family: "yekan";
+    src: url(fonts/Yekan.eot);
+    src: url(fonts/Yekan.eot?#iefix) format("embedded-opentype"), url(fonts/Yekan.woff) format("woff"), url(fonts/Yekan.ttf) format("truetype"), url(fonts/Yekan.svg#BYekan) format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+
+body {
+    font-family: "yekan";
+    -webkit-touch-callout: none;
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-highlight: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    /* For some Androids */
+}
+
+button,select,option,b {
+    font-family: "yekan";
+}
+
+
+/* Recommended for Windows 8 Phone */
+
+
+/* SOURCE: http://www.excellentwebworld.com/common-problems-solution-for-windows-phone-8-phonegap */
+
+html {
+    -ms-touch-action: pan-x;
+}
+
+
+/* Recommended for Windows 8 Phone */
+
+
+/* SOURCE: http://www.excellentwebworld.com/common-problems-solution-for-windows-phone-8-phonegap */
+
+body {
+    -ms-touch-action: pan-y;
+    -ms-content-zooming: none;
+}
+
+
+/* allow copy-paste */
+
+input,
+textarea {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+body {
+    /* margin: 0.5rem ; */
+    background: white;
+    color: black;
+}
+
+.list-block {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.filter-header {
+    margin-top: 45px;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+/*************************************************/
+
+.navbar,
+.subnavbar,
+.toolbar {
+    background: #9b5c8f;
+}
+
+.label-switch input[type=checkbox]:checked+.checkbox:after {
+    background: #9b5c8f;
+}
+
+.label-switch input[type=checkbox]:checked+.checkbox {
+    background: rgba(155, 92, 143, .5);
+}
+
+.uib_sidebar {
+    background: #9b5c8f !important;
+    -webkit-box-shadow: 9px 0px 5px -2px rgba(0, 0, 0, 0.17);
+    -moz-box-shadow: 9px 0px 5px -2px rgba(0, 0, 0, 0.17);
+    box-shadow: 9px 0px 5px -2px rgba(0, 0, 0, 0.17);
+}
+
+
+/***************************************************/
+
+.pull-to-refresh-layer {
+    z-index: 10 !important;
+}
+
+.navbar-fixed .page-content,
+.navbar-through .page-content {}
+
+select.selectMain {
+    -webkit-appearance: button;
+    -webkit-border-radius: 2px;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    -webkit-padding-end: 20px;
+    -webkit-padding-start: 2px;
+    -webkit-user-select: none;
+    background-color: #f7f7f8;
+    border: 1px solid #AAA;
+    color: #555;
+    font-size: inherit;
+    overflow: hidden;
+    padding: 5px 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    height: 50px;
+}
+
+select#DayTimeOderStatus {
+    -webkit-appearance: button;
+    -webkit-border-radius: 2px;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    -webkit-padding-end: 20px;
+    -webkit-padding-start: 2px;
+    -webkit-user-select: none;
+    background-color: #f7f7f8;
+    border: 1px solid #AAA;
+    color: #555;
+    font-size: inherit;
+    overflow: hidden;
+    padding: 5px 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 49%;
+    height: 50px;
+    margin: 0px;
+}
+
+.selectStyle {
+    -webkit-appearance: button;
+    -webkit-border-radius: 2px;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    -webkit-padding-end: 20px;
+    -webkit-padding-start: 2px;
+    -webkit-user-select: none;
+    background-color: #f7f7f8;
+    border: 1px solid #AAA;
+    color: #555;
+    font-size: inherit;
+    overflow: hidden;
+    padding: 5px 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    height: 50px;
+    margin: 0px;
+}
+
+#MainCatgoryList {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+#MainCatgoryList>li {
+    width: 100%;
+    padding: 5px;
+    border-bottom: 1px solid gray;
+}
+
+.footer-fix {
+    position: fixed;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    background-color: #9b5c8f;
+    color: white;
+}
+
+.chat-input {
+    width: 100%;
+    height: 40px;
+}
+
+.orderItemRow {
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.67);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.67);
+    box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.67);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    background-color: #e8e8e8;
+}
+
+.active {
+    background-color: #9b5c8f;
+    border-bottom: 4px solid white;
+}
+
+.tab {
+    background-color: white !important;
+    border-bottom: none !important;
+    height: 100% !important;
+    overflow-y: scroll !important;
+}
+
+.tab-link {
+    margin: 0px;
+}
+
+.product-card-header-pic .card-header {}
+
+.product-img {
+    width: 100%;
+    height: 200px;
+    background-size: 100%;
+}
+
+.product-Title {
+    color: white;
+    text-shadow: 2px 2px 8px black;
+    padding: 5px;
+}
+
+.swiper-container {
+    width: 100vw;
+    height: 400px;
+}
+
+.timeGray {
+    color: gainsboro;
+    padding: 5px;
+}
+
+.bluebtn {
+    color: white !important;
+    background: #2196f3 !important;
+    padding: 10px !important;
+    margin: 5px;
+}
+
+.red-minus {
+    color: firebrick;
+    font-size: 20px;
+}
+
+.broder-bottom {
+    border-bottom: 1px solid black;
+}
+
+
+/************************* dashboard ************************************/
+
+.completed_tag {
+    color: green;
+}
+
+.completed {
+    border: 1px solid green;
+    color: green;
+    padding: 5px;
+    border-radius: 3px;
+    margin: 3px;
+}
+
+.completed>b {
+    background-color: darkgreen;
+    color: white;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 50px;
+    
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.processing_tag {
+    color: deepskyblue;
+}
+
+.processing {
+    border: 1px solid dodgerblue;
+    color: dodgerblue;
+    padding: 5px;
+    border-radius: 3px;
+    margin: 3px;
+}
+
+.processing>b {
+    background: dodgerblue;
+    color: white;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 50px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.cancelled_tag {
+    color: #cba200;
+}
+
+.cancelled {
+    border: 1px solid #cba200;
+    color: #cba200;
+    padding: 5px;
+    border-radius: 3px;
+    margin: 3px;
+}
+
+.cancelled>b {
+    background-color: #cba200;
+    color: white;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 50px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.pending_tag {
+    color: #020eff;
+}
+
+.pending {
+    border: 1px solid #020eff;
+    color: #020eff;
+    padding: 5px;
+    border-radius: 3px;
+    margin: 3px;
+}
+
+.pending>b {
+    background-color: #0008a4;
+    color: white;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 50px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.on-hold_tag {
+    color: #ce00d0;
+}
+
+.onhold {
+    border: 1px solid #ce00d0;
+    color: #ce00d0;
+    padding: 5px;
+    border-radius: 3px;
+    margin: 3px;
+}
+
+.onhold>b {
+    background-color: #860088;
+    color: white;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 50px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.refunded_tag {
+    color: #de6800;
+}
+
+.refunded {
+    border: 1px solid #de6800;
+    color: #de6800;
+    padding: 5px;
+    border-radius: 3px;
+    margin: 3px;
+}
+
+.refunded>b {
+    background-color: #b15300;
+    color: white;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 50px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.failed_tag {
+    color: red;
+}
+
+.failed {
+    border: 1px solid red;
+    color: red;
+    padding: 5px;
+    border-radius: 3px;
+    margin: 3px;
+}
+
+.failed>b {
+    background-color: firebrick;
+    color: white;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 50px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.saveSetting {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.removeSetting {
+    background-color: firebrick;
+    color: white;
+}
+
+.infinite-scroll-preloader {
+    margin-top: -20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.infinite-scroll-preloader .preloader {
+    width: 34px;
+    height: 34px;
+}
+
+.price {
+    color: #4caf50!important
+}
+
+
+/****************************************************/
+
+
+/* Style the buttons that are used to open and close the accordion panel */
+
+button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+button.accordion:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+}
+
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
+button.accordion.active,
+button.accordion:hover {
+    background-color: #ddd;
+}
+
+
+/* Style the accordion panel. Note: hidden by default */
+
+div.accordionpanel {
+    padding: 0 0px;
+    background-color: white;
+    display: none;
+}
+
+.swiper-slide {
+    background: none !important;
+}
+
+
+/********************************************/
+
+.panel {
+    -webkit-transition-duration: .1s;
+    transition-duration: .1s;
+}
+
+body.with-panel-left-cover .panel,
+body.with-panel-right-cover .panel {
+    box-shadow: none;
+}
+
+.AppSetting {
+    color: white;
+}
+
+.tab-product {
+    padding: 0px !important;
+}
+
+/**********************/
+.canvasjs-chart-credit{
+    display: none !important;
+}
+
+.note_row{
+    padding-left: 5px;
+    padding-right: 5px;
+    border-bottom: 1px solid #c0a7bb;
+}
+.paid{
+    background-color: green;
+    color: white;
+    padding-left: 5px ;
+    padding-right: 5px ;
+}
+.Notpaid{
+    background-color: red;
+    color: white;
+    padding-left: 5px ;
+    padding-right: 5px ;
+}

@@ -1,0 +1,145 @@
+@font-face {
+    font-family: "yekan";
+    src: url(fonts/Yekan.eot);
+    src: url(fonts/Yekan.eot?#iefix) format("embedded-opentype"), url(fonts/Yekan.woff) format("woff"), url(fonts/Yekan.ttf) format("truetype"), url(fonts/Yekan.svg#BYekan) format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+body{
+    font-family: "yekan";
+}
+
+
+.navbar,
+.subnavbar,
+.toolbar {
+    background: #9b5c8f;
+}
+
+.label-switch input[type=checkbox]:checked+.checkbox:after {
+    background: #9b5c8f;
+}
+
+.label-switch input[type=checkbox]:checked+.checkbox {
+    background: rgba(155, 92, 143, .5);
+}
+
+.uib_sidebar {
+    background: #9b5c8f !important;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1!important;
+    background: white !important;
+}
+
+.swiper-pagination-bullet {
+    background: white !important;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    background: #9b5c8f;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.escapeTutbtn {
+    position: fixed;
+    z-index: 1000;
+    bottom: 0px;
+    right: 0px;
+    font-size: 18px;
+    padding: 5px;
+    margin: 5px;
+    color: white;
+    border: 1px solid white;
+}
+
+
+/**************************************************/
+
+.mat-label {
+    display: block;
+    font-size: 16px;
+    transform: translateY(25px);
+    color: #9b9b9b;
+    transition: all 0.2s;
+}
+
+.mat-input {
+    position: relative;
+    background: transparent;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 8px 0;
+    font-size: 16px;
+}
+
+.mat-div {
+    padding: 5px 0 0 0;
+    position: relative;
+}
+
+.mat-div:after,
+.mat-div:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #e2e2e2;
+    bottom: 0;
+    left: 0;
+    transition: all 0.2s;
+}
+
+.mat-div::after {
+    background-color: #3498db;
+    transform: scaleX(0);
+}
+
+.is-active::after {
+    transform: scaleX(1);
+}
+
+.is-active .mat-label {
+    color: #3498db;
+}
+
+.is-completed .mat-label {
+    font-size: 12px;
+    transform: translateY(0);
+}
+
+
+/**************************************************/
+
+.input-option>select {
+    text-align: center;
+    width: 100%;
+    height: 40px;
+}
+
+#Product_price{
+        display: grid;
+}

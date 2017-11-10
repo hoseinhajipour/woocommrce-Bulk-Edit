@@ -1,0 +1,154 @@
+<div class="subnavbar">
+    <div class="buttons-row">
+        <a href="#UserInfo" class="button active tab-link" tkey="Info">Info</a>
+        <a href="#UserOderHistory" class="button tab-link" onclick="fetchThisUserOrder()" tkey="OrderHistory">Order History
+            <span class="badge" id="UserOrderCount"></span>
+        </a>
+    </div>
+</div>
+
+<div class="tabs-swipeable-wrap tabs">
+    <div id="UserInfo" class="tab active">
+        <div class="content-block" style="padding: 0px;margin: 0px;">
+            <div class="card" dir="auto">
+                <div class="card-header">Extra Information</div>
+                <div class="card-content">
+                    <div class="card-content-inner">
+
+                        <div class="row">
+                            <div class="col-50" tkey="firstname">first name</div>
+                            <div class="col-50" id="user_first_name"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-50" tkey="lastname">last name</div>
+                            <div class="col-50" id="user_last_name"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-50">username</div>
+                            <div class="col-50" id="user_username"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-50" tkey="email">email</div>
+                            <div class="col-50" id="user_email"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card" dir="auto">
+                <div class="card-header">Billing Information</div>
+                <div class="card-content">
+                    <div class="card-content-inner">
+
+                        <div class="row">
+                            <div class="col-50" tkey="firstname">first name</div>
+                            <div class="col-50" id="user_billing_first_name"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-50" tkey="lastname">last name</div>
+                            <div class="col-50" id="user_billing_last_name"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-50">company</div>
+                            <div class="col-50" id="user_billing_company_username"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-50">address 1</div>
+                            <div class="col-50" id="user_billing_address_1"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-50">address 2</div>
+                            <div class="col-50" id="user_billing_address_2"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-50">city</div>
+                            <div class="col-50" id="user_billing_city"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-50">state</div>
+                            <div class="col-50" id="user_billing_state"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-50">postcode</div>
+                            <div class="col-50" id="user_billing_postcode"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-50">country</div>
+                            <div class="col-50" id="user_billing_country"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-50" tkey="email">email</div>
+                            <div class="col-50" id="user_billing_email"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-50" tkey="phone">phone</div>
+                            <div class="col-50">
+                                <a id="user_billing_phone" href="tel:" class="phoneNumber">--</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">Shipping Information</div>
+                <div class="card-content">
+                    <div class="card-content-inner">
+
+                        <div class="row">
+                            <div class="col-50" tkey="firstname">first name</div>
+                            <div class="col-50" id="user_shipping_first_name"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-50" tkey="lastname">last name</div>
+                            <div class="col-50" id="user_shipping_last_name"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-50">company</div>
+                            <div class="col-50" id="user_shipping_company_username"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-50">address 1</div>
+                            <div class="col-50" id="user_shipping_address_1"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-50">address 2</div>
+                            <div class="col-50" id="user_shipping_address_2"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-50">city</div>
+                            <div class="col-50" id="user_shipping_city"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-50">state</div>
+                            <div class="col-50" id="user_shipping_state"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-50">postcode</div>
+                            <div class="col-50" id="user_shipping_postcode"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-50">country</div>
+                            <div class="col-50" id="user_shipping_country"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-50" tkey="email">email</div>
+                            <div class="col-50" id="user_shipping_email"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-50" tkey="phone">phone</div>
+                            <div class="col-50">
+                                <a id="user_shipping_phone" href="tel:" class="phoneNumber">--</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="UserOderHistory" class="tab">
+        <div class="content-block" style="padding: 0px;margin: 0px;" id="UserOrderHistoryList">
+        </div>
+    </div>
+
+</div>

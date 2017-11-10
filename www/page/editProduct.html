@@ -1,0 +1,257 @@
+<div class="toolbar tabbar tabbar-scrollable" style="top: 0px;">
+    <div class="toolbar-inner">
+        <a href="#tab-Category-edit" class="tab-link active">
+            <i class="fa fa-th" aria-hidden="true"></i>Category
+        </a>
+        <a href="#tab-Content-edit" class="tab-link">
+            <i class="fa fa-text-width" aria-hidden="true"></i>Content
+        </a>
+        <a href="#tab-Shipping-edit" class="tab-link">
+            <i class="fa fa-truck" aria-hidden="true"></i>Shipping
+        </a>
+        <a href="#tab-Images-edit" class="tab-link">
+            <i class="fa fa-picture-o" aria-hidden="true"></i>Images
+        </a>
+        <a href="#tab-Attribute-edit" class="tab-link">
+            <i class="fa fa-align-left" aria-hidden="true"></i>Attribute
+        </a>
+
+    </div>
+</div>
+
+<!-- Links popover -->
+<div class="popover popover-links-Edit-product">
+    <div class="popover-angle"></div>
+    <div class="popover-inner">
+        <div class="list-block">
+            <ul>
+                <li><a href="#" class="list-button item-link">fetch Data By Barcode</a></li>
+                <li><a href="#" class="list-button item-link">fetch Data By Search Name</a></li>
+                <li><a href="#" class="list-button item-link" tkey="Trash">Trash</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="tabs tabs-swipeable-wrap">
+    <!-- Category -->
+    <div id="tab-Category-edit" class="tab active">
+        <div class="content-block">
+            <a class="button widget ProductCategory link open-popup" data-uib="framework7/button" data-popup=".popup-Category" data-ver="0" onclick="loadCategory()">
+                <span></span><i class="fa fa-sliders icon"></i> SeLect Category</a>
+            <hr/>
+            <div id="EditProductSelectedCategory">
+            </div>
+        </div>
+    </div>
+    <!-- Content -->
+    <div id="tab-Content-edit" class="tab">
+        <div class="content-block">
+            <div class="widget d-margins" data-uib="framework7/list_block" data-ver="0">
+                <div class="list-block">
+                    <ul>
+                        <li class="widget" data-uib="framework7/input" data-ver="0">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">Name</div>
+                                    <div class="item-input">
+                                        <input type="text" id="editProductName" placeholder="product name">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="widget " data-uib="framework7/input" data-ver="0">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">description</div>
+                                    <div class="item-input">
+                                        <textarea type="text" id="editProductdescription" placeholder="description"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="widget " data-uib="framework7/input" data-ver="0">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">Short description</div>
+                                    <div class="item-input">
+                                        <textarea type="text" id="editProductShortdescription" placeholder="description"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="widget" data-uib="framework7/input" data-ver="0">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">Regular price</div>
+                                    <div class="item-input">
+                                        <input type="number" id="editProductPrice" placeholder="Price">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="widget" data-uib="framework7/input" data-ver="0">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">Sale price</div>
+                                    <div class="item-input">
+                                        <input type="number" id="editProductSalePrice" placeholder="Price">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Shipping -->
+    <div id="tab-Shipping-edit" class="tab">
+        <div class="content-block">
+            <div class="widget d-margins" data-uib="framework7/list_block" data-ver="0">
+                <div class="list-block">
+                    <ul>
+                        <li class="widget" data-uib="framework7/input" data-ver="0">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">Quantity</div>
+                                    <div class="item-input">
+                                        <input type="number" id="editProduct_stock_quantity" placeholder="Quantity" value="0">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="widget" data-uib="framework7/input" data-ver="0">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">SKU</div>
+                                    <div class="item-input">
+                                        <input type="text" id="editProduct_SKU" placeholder="SKU">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="widget" data-uib="framework7/input" data-ver="0">
+                            <div class="item-content">
+                                <div class="item-media"><i class="icon f7-icons">shipping classes</i></div>
+                                <div class="item-inner">
+                                    <div class="item-input">
+                                        <select id="Editshipping_classes">
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="widget" data-uib="framework7/input" data-ver="0">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">Weight</div>
+                                    <div class="item-input">
+                                        <input type="number" id="editProduct_Weight" placeholder="Weight">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content-block-title">Dimensions</div>
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-content-inner">
+                        <div class="list-block">
+                            <ul>
+                                <li class="widget" data-uib="framework7/input" data-ver="0">
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title label">length</div>
+                                            <div class="item-input">
+                                                <input type="number" id="editProduct_length" placeholder="length" value="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="widget" data-uib="framework7/input" data-ver="0">
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title label">width</div>
+                                            <div class="item-input">
+                                                <input type="number" id="editProduct_width" placeholder="width" value="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="widget" data-uib="framework7/input" data-ver="0">
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title label">height</div>
+                                            <div class="item-input">
+                                                <input type="number" id="editProduct_height" placeholder="height" value="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="widget" data-uib="framework7/input" data-ver="0">
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title label">unit</div>
+                                            <div class="item-input">
+                                                <input type="text" id="editProduct_unit" placeholder="unit" value="cm">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Attribute -->
+    <div id="tab-Attribute-edit" class="tab">
+        <div class="content-block">
+            <div class="widget d-margins" data-uib="framework7/list_block" data-ver="0">
+                <div class="list-block">
+                    <ul>
+                        <li class="widget" data-uib="framework7/input" data-ver="0">
+                            <div class="row no-gutter">
+                                <div class="col-30" style="padding-left:15px;padding-top:5px;">Barcode</div>
+                                <div class="col-50">
+                                    <input type="number" id="editProduct_Barcode" placeholder="Barcode Code">
+                                </div>
+                                <div class="col-20" style="padding-left:15px;padding-top:5px;"><i class="fa fa-barcode" aria-hidden="true" onclick="OpenBarcodeReader()"></i></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="button" onclick="addNewAttribute()">+ Add New Attribute</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-content-inner" id="NewAttributeList"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Images -->
+    <div id="tab-Images-edit" class="tab">
+        <div class="content-block">
+            <div class="row no-gutter">
+                <!-- Each "cell" has col-[widht in percents] class -->
+                <div class="col-50"><a class="button button-round button-fill" data-uib="framework7/button" id="pimageAdd"><span class="fa fa-picture-o"></span></a></div>
+                <div class="col-50"><a class="button button-round button-fill" data-uib="framework7/button" onclick="TakeImageProduct()"><span class="fa fa-camera"></span></a></div>
+            </div>
+            <br/>
+            <hr/>
+            <div id="EditProductImageList">
+            </div>
+        </div>
+    </div>
+</div>
+<a class="button widget d-margins" onclick="UpdateProduct()"><span>Update Product</span></a>

@@ -1,0 +1,84 @@
+<div class="content-block">
+    <div class="row">
+
+        <div class="col-33" align="center" onclick="goproductListPage()">
+            <h3 id="TotalProduct" class="price">--</h3>
+            <label tkey="Product" class="price">Product</label>
+        </div>
+        <div class="col-33" align="center" onclick="goOrderListPage()">
+            <h3 id="TotalSale" class="price" dir="auto">--</h3>
+            <label tkey="Sales" class="price">Sales</label>
+        </div>
+        <div class="col-33" align="center" onclick="goCustomerPage()">
+            <h3 id="TotalCustomer" class="price">--</h3>
+            <label tkey="Customer" class="price">Customer</label>
+        </div>
+    </div>
+
+    <div align="center">
+        <div></div>
+
+    </div>
+
+    <hr>
+
+    <div align="center" tkey="Orders">Orders</div>
+    <hr>
+    <div class="row">
+        <div class="col-50" align="center">
+            <div class="completed link" onclick="fetchOrderListByStatus('completed')">
+                <label tkey="completed">completed</label>
+                <br/>
+                <b id="oreder-completed"></b>
+            </div>
+        </div>
+        <div class="col-50" align="center">
+            <div class="processing link" onclick="fetchOrderListByStatus('processing')">
+                <label tkey="processing">processing</label>
+                <br/>
+                <b id="oreder-processing"></b>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-50" align="center">
+            <div class="onhold link" onclick="fetchOrderListByStatus('on-hold')">
+                <label tkey="onhold">onhold</label>
+                <br/>
+                <b id="oreder-onhold"></b>
+            </div>
+        </div>
+        <div class="col-50" align="center">
+            <div class="pending link" onclick="fetchOrderListByStatus('pending')">
+                <label tkey="pending">pending</label>
+                <br/>
+                <b id="oreder-pending"></b>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-50" align="center">
+            <div class="cancelled link" onclick="fetchOrderListByStatus('cancelled')">
+                <label tkey="cancelled">cancelled</label>
+                <br/>
+                <b id="oreder-cancelled"></b>
+            </div>
+        </div>
+        <div class="col-50" align="center">
+            <div class="refunded link" onclick="fetchOrderListByStatus('refunded')">
+                <label tkey="refunded">refunded</label>
+                <br/>
+                <b id="oreder-refunded"></b>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-100" align="center">
+            <div class="failed link" onclick="fetchOrderListByStatus('failed')">
+                <label tkey="failed">failed</label>
+                <br/>
+                <b id="oreder-failed"></b>
+            </div>
+        </div>
+    </div>
+</div>
